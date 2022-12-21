@@ -200,7 +200,7 @@ body {
 }
 .project-img{
   max-width: 300px;
-  height: 150px;
+  max-height: 150px;
 }
 .number{
     font-size: 180px;
