@@ -7,6 +7,12 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+::-webkit-scrollbar{
+  display: none;
+}
+html{
+  scroll-behavior: smooth;
+}
 body {
   background-color: #131313;
 }
@@ -31,9 +37,6 @@ body {
   outline: 5px solid #6db683da;
   border-radius: 50%;
   box-shadow: inset 0px 0px 9px 9px rgb(0, 0, 0);
-}
-.desktop-navbar {
-  /* border: 1px solid yellow; */
 }
 .nav-desktop-ul {
   display: flex;
@@ -69,9 +72,9 @@ body {
 
 .about-section {
   max-width: 100vw;
-  padding: 33px 25px;
-  padding-bottom: 3px;
+  padding: 60px 27px 21px 27px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -84,7 +87,7 @@ body {
   max-width: 210px;
   border-radius: 50%;
   border: 6px solid #6db683b1;
-  outline: 20px solid #c2ffd226;
+  outline: 20px solid #c2ffd216;
   margin: 21px;
 }
 .suman-paik {
@@ -102,7 +105,7 @@ body {
 .who-i-am {
   font-size: 13px;
   line-height: 1.3;
-  text-align: justify;
+  text-align: center;
   color: rgb(194, 199, 195);
 }
 
@@ -110,34 +113,39 @@ body {
 .skill-section {
   max-width: 100vw;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 21px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 12px auto;
+  padding: 12px;
+  gap: 12px;
+  position: relative;
 }
 .skill {
-  width: 300px;
-  background-image: linear-gradient(
-    to bottom right,
-    rgba(97, 120, 97, 0.244),
-    rgba(0, 0, 0, 0.209)
-  );
-  padding: 12px 15px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 9px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 6px 3px;
   transition: 0.3s;
 }
-.skill:hover {
-  margin-bottom: 30px;
+.skill-name{
+  position: absolute;
+  font-size: 60px;
+  color: rgba(81, 115, 81, 0.183);
+  z-index: -1;
+  width: 280px;
+  text-align: center;
+  left: 0; 
+  right: 0; 
+  top: 30%;
+  margin-left: auto; 
+  margin-right: auto;
 }
 .tech-p {
-  font-size: 13px;
+  font-size: 12.5px;
   margin: 12px;
+  font-family: monospace;
+
 }
 .tech {
   max-width: 40px;
@@ -151,11 +159,12 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .project-container {
   background-image: linear-gradient(to bottom right, rgba(129, 186, 132, 0.146), rgba(0, 0, 0, 0.123)) ;
-  min-width: 312px;
+  min-width: 309px;
   max-width: 800px;
   height: auto;
   margin: 18px;
@@ -174,7 +183,6 @@ body {
 .left{
     width: 300px;
     height: 150px;
-    /* border: 1px solid gray; */
     margin: 6px;
     background-color: transparent;
     padding: 0px 21px;
@@ -185,10 +193,14 @@ body {
 .right{
     width: 300px;
     height: 150px;
-    border: 1px solid rgba(128, 128, 128, 0.557);
+    border: 4px solid rgba(99, 134, 102, 0.462);
     margin: 6px;
     background-color: transparent;
-    border-radius: 9px;
+    overflow: hidden;
+}
+.project-img{
+  max-width: 300px;
+  height: 150px;
 }
 .number{
     font-size: 180px;
@@ -208,7 +220,6 @@ body {
     
 }
 .element p{
-    /* background-color: rgb(255, 217, 0); */
     font-size: 12px;
     color: white;
     text-shadow: 2px 2px 5px blck;
@@ -224,7 +235,7 @@ body {
     border: none;
     margin-right: 9px;
     box-shadow: 3px 3px white;
-    transition: .2s;
+    transition: .1s;
 }
 .btn:active{
     transform: translate(3px, 3px);
@@ -232,5 +243,5 @@ body {
 }
 .one{ background-color: rgb(255, 98, 0);}
 .two{ background-color: rgb(12, 81, 255); }
-.three{ background-color: rgb(208, 172, 14);}
+.three{ background-color: rgb(228, 175, 0);}
 .four{ background-color: rgb(1, 164, 229);}
