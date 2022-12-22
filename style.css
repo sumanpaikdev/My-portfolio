@@ -23,7 +23,7 @@ body {
   box-sizing: border-box;
 }
 /* loader  */
-#loader {
+/* #loader {
   border: 12px solid #f3f3f3;
   border-radius: 50%;
   border-top: 12px solid #444444;
@@ -45,7 +45,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-}
+} */
 
 /* header  */
 
