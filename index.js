@@ -11,7 +11,7 @@ let sourcetext = document.getElementById("closevw")
 
 setTimeout(function closeview() {
     sourcetext.style.display = "block"
-}, 4000)
+}, 9000)
 
 function closesource(){
     sourcetext.style.display = "none"
