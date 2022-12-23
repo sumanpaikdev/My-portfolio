@@ -15,11 +15,7 @@
       rel="stylesheet"
     />
   </head>
-  <body onload="loadfun()">
-
-    <!-- loader -->
-    <!-- <div id="loader" class="center"></div> -->
-
+  <body>
     <!-- This is header container including navbar  -->
     <header class="hearder-part">
       <img class="header-logo" src="./image/IMG_1670398722376.png" alt="logo" />
@@ -35,22 +31,55 @@
           </li> -->
           <li class="nav-desktop-li">
             <a href="#project-section" class="nav-desktop-menu">
-              <img
-                src="./image/start-up.png"
-                class="menu-png"
-              />Projects</a
+              <img src="./image/start-up.png" class="menu-png" />Projects</a
             >
           </li>
-          <li class="nav-desktop-li">
-            <a href="#scl" class="nav-desktop-menu">
-              <img
-                src="./image/support.png"
-                class="menu-png"
-              />Contact</a
+          <li class="nav-desktop-li" id="contact-div" onclick="setup()">
+            <a class="nav-desktop-menu">
+              <img src="./image/support.png" class="menu-png" />Contact</a
             >
           </li>
         </ul>
       </nav>
+      <div class="contact-box" id="contactbox">
+        <ul class="contact-ul">
+          <div class="dotclose" onclick="closediv()">
+            <img src="./social/close.png" class="cross" />
+          </div>
+          <li
+            class="contact-li"
+            onclick="location.href='mailto:sumanpaik.dev@gmail.com'"
+          >
+            <img src="./social/gmail.png" alt="" class="contact-img" />
+            <a href="javascript:void(0)">Gmail</a>
+          </li>
+          <li
+            class="contact-li"
+            onclick="location.href='https://github.com/sumanpaikdev'"
+          >
+            <img src="./social/github.png" alt="" class="contact-img" />
+            <a href="javascript:void(0)">GitHub</a>
+          </li>
+          <li
+            class="contact-li"
+            onclick="location.href='https://twitter.com/sumanpaikdev'"
+          >
+            <img src="./social/twitter.png" alt="" class="contact-img" />
+            <a href="javascript:void(0)">Twitter</a>
+          </li>
+          <li
+            class="contact-li"
+            onclick="location.href='https://www.linkedin.com/in/suman-paik-21a2b5213/'"
+          >
+            <img src="./social/linkedin (1).png" alt="" class="contact-img" />
+            <a href="javascript:void(0)">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+      <div class="source-code" id="closevw">
+        <p class="web-p">Hi👋 I'm Suman Paik & this is my website. View my portfolio source code: Click <span><a href="https://github.com/sumanpaikdev/My-portfolio">source</a></span></p>
+        <a onclick="closesource()" class="closebtn">close</a>
+      </div>
     </header>
 
     <!-- This is About container after the navbar  -->
@@ -69,6 +98,8 @@
           And now I am continuously learning new stuff.💁
         </p>
       </div>
+
+      <h1 class="con">Links</h1>
       <div class="social-link" id="scl">
         <a
           href="https://github.com/sumanpaikdev"
@@ -103,6 +134,7 @@
         </a>
       </div>
     </section>
+
     <h1 class="skill-name">Skills</h1>
 
     <!-- This is Skills container after the About section  -->
@@ -128,21 +160,27 @@
         <p class="tech-p">TypeScript</p>
       </div>
       <div class="skill">
-        <img src="./image/pngwing.com.png" style="background-color: white; border-radius: 6px;" alt="React JS" class="tech" />
+        <img
+          src="./image/pngwing.com.png"
+          style="background-color: white; border-radius: 6px"
+          alt="React JS"
+          class="tech"
+        />
         <p class="tech-p">Node JS</p>
       </div>
       <div class="skill">
-        <img src="./image/pngwing.com (4).png" style="transform: scale(1.8);" alt="React JS" class="tech" />
+        <img
+          src="./image/pngwing.com (4).png"
+          style="transform: scale(1.8)"
+          alt="React JS"
+          class="tech"
+        />
         <p class="tech-p">Express JS</p>
       </div>
       <div class="skill">
         <img src="./image/pngwing.com (5).png" alt="React JS" class="tech" />
         <p class="tech-p">Mongo DB</p>
       </div>
-      <!-- <div class="skill">
-        <img src="./image/json.png" alt="React JS" class="tech" />
-        <p class="tech-p">JSON</p>
-      </div> -->
       <div class="skill">
         <img src="./image/java.png" alt="React JS" class="tech" />
         <p class="tech-p">Java</p>
