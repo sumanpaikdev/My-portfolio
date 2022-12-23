@@ -72,7 +72,8 @@ body {
   border-bottom: 2px solid white;
   padding-bottom: 6px;
 }
-.source-code{
+
+.source-code-one {
   padding: 25px;
   max-width: 600px;
   height: auto;
@@ -84,30 +85,28 @@ body {
   margin-left: 20px;
   display: none;
   animation: sourcecode;
-  animation-duration: .6s;
+  animation-duration: 0.6s;
 }
-@keyframes sourcecode{
-  from{
-    transform: translate(600px);
+@keyframes sourcecode {
+  from {
+    transform: translateY(-600px);
   }
-  to{
-    transform: translate(0px);
-
+  to {
+    transform: translateY(0px);
   }
 }
-.web-p{
-  line-height: 1.5;  
+.web-p {
+  line-height: 1.5;
   font-size: 13.5px;
   color: rgb(46, 46, 46);
   margin: 0px 0px 9px 0px;
 }
-.web-p > span > a{
+.web-p > span > a {
   color: blue;
   font-weight: bold;
   cursor: pointer;
-
 }
-.closebtn{
+.closebtn {
   color: rgb(255, 255, 255);
   background-color: rgba(55, 55, 55, 0.679);
   text-decoration: none;
@@ -117,17 +116,16 @@ body {
   font-family: monospace;
   font-size: 15px;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
-.closebtn:hover{
+.closebtn:hover {
   outline: 2px solid rgba(0, 0, 0, 0.31);
   color: rgba(0, 0, 0, 0.696);
   background-color: transparent;
   font-weight: bold;
-
 }
 /* contact box  */
-#contactbox{
+#contactbox {
   backdrop-filter: blur(20px);
 }
 .contact-box {
@@ -144,14 +142,15 @@ body {
   display: none;
   z-index: 5;
   animation-name: appear;
-  animation-duration: .3s;
+  animation-duration: 0.4s;
 }
-@keyframes appear{
-  from{
-    transform: scale(0);
-    opacity: 0.2;
+@keyframes appear {
+  from {
+    transform: translateY(-600px);
   }
-  to{transform: scale(1);}
+  to {
+    transform: translateY(0px);
+  }
 }
 .dotclose {
   position: absolute;
@@ -168,7 +167,7 @@ body {
   -webkit-filter: invert(1);
   filter: invert(1);
 }
-.cross:hover{
+.cross:hover {
   opacity: 0.6;
 }
 
@@ -582,19 +581,14 @@ body {
   }
 }
 
-
-
-
-
-
-.reveal{
+.reveal {
   position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 1s all ease;
 }
 
-.reveal.active{
+.reveal.active {
   transform: translateY(0);
   opacity: 1;
 }
