@@ -83,6 +83,17 @@ body {
   right: 20px;
   margin-left: 20px;
   display: none;
+  animation: sourcecode;
+  animation-duration: .6s;
+}
+@keyframes sourcecode{
+  from{
+    transform: translate(600px);
+  }
+  to{
+    transform: translate(0px);
+
+  }
 }
 .web-p{
   line-height: 1.5;  
@@ -98,7 +109,7 @@ body {
 }
 .closebtn{
   color: rgb(255, 255, 255);
-  background-color: rgba(55, 55, 55, 0.856);
+  background-color: rgba(55, 55, 55, 0.679);
   text-decoration: none;
   margin-top: 20px;
   padding: 6px 9px;
@@ -116,12 +127,15 @@ body {
 
 }
 /* contact box  */
+#contactbox{
+  backdrop-filter: blur(20px);
+}
 .contact-box {
   padding-top: 25px;
   max-width: 600px;
   height: auto;
-  border: 1px solid rgba(255, 255, 255, 0.285);
-  background-color: #272c37;
+  border: 1px solid rgba(255, 255, 255, 0.145);
+  background-color: #1c2029;
   border-radius: 12px;
   position: absolute;
   top: 90px;
@@ -129,8 +143,16 @@ body {
   margin-left: 20px;
   display: none;
   z-index: 5;
+  animation-name: appear;
+  animation-duration: .3s;
 }
-
+@keyframes appear{
+  from{
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  to{transform: scale(1);}
+}
 .dotclose {
   position: absolute;
   top: 9px;
@@ -558,4 +580,21 @@ body {
   100% {
     --rotate: 360deg;
   }
+}
+
+
+
+
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
 }
