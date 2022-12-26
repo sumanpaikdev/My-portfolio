@@ -219,10 +219,6 @@ body {
   flex-wrap: wrap;
   overflow: hidden;
 }
-
-/* .profile-image {
-  border: 1px solid rgb(8, 251, 255);
-} */
 .about-logo {
   max-width: 210px;
   border-radius: 50%;
